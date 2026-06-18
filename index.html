@@ -3,300 +3,298 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="杨嘉莉 - 华东师范大学计算机科学拔尖班本科生，研究方向包括 LLM Agent、可信智能体、知识增强与长程推理。">
-  <title>杨嘉莉 | Jiali Yang</title>
+  <meta name="description" content="杨嘉莉 - 华东师范大学计算机科学拔尖班本科生，关注 LLM Agent、可信智能体、知识增强与长程推理。">
+  <title>杨嘉莉 - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="site-shell">
-    <header class="site-header" data-reveal>
-      <a class="brand" href="#top" aria-label="回到首页">
-        <span class="brand-mark">JY</span>
-        <span>Jiali Yang</span>
-      </a>
-      <nav class="nav-links" aria-label="主导航">
-        <a href="#research">Research</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+  <div class="page-loader" id="loader">
+    <span class="loader-text">正在翻阅...</span>
+  </div>
 
-    <main id="top">
-      <section class="hero section-grid">
-        <div class="hero-copy" data-reveal>
-          <p class="eyebrow">ECNU CS Honors Undergraduate · Class of 2027</p>
-          <h1>杨嘉莉 <span>Jiali Yang</span></h1>
-          <p class="lead">
-            我关注可信智能体、多智能体协作、知识增强与长程推理，也喜欢把模型能力落到可审计、可复现、可运行的系统里。
-          </p>
-          <div class="hero-tags" aria-label="研究关键词">
-            <span>LLM Agent</span>
-            <span>Trusted AI</span>
-            <span>Long-context Reasoning</span>
-            <span>Efficient LLM Systems</span>
+  <div class="noise"></div>
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="custom-cursor-dot" id="cursorDot"></div>
+
+  <a href="#contact" class="top-contact reveal">联系我</a>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-doodle" style="width:180px;height:180px;top:-64px;right:-36px;"></div>
+      <div class="hero-doodle" style="width:120px;height:120px;bottom:90px;left:-36px;animation-delay:-7s;"></div>
+
+      <div class="container">
+        <div class="hero-inner">
+          <div class="polaroid-wrap reveal" id="polaroidWrap">
+            <svg class="paperclip" width="38" height="50" viewBox="0 0 36 48" fill="none" aria-hidden="true">
+              <path d="M18 2 L18 38 Q18 46 12 44 Q6 42 8 36 L8 8 Q8 2 14 2 Q20 2 19 8 L18 36 Q17 42 13 40 Q9 38 10 32 L10 10" stroke="#b0a5ac" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <div class="polaroid" id="polaroid">
+              <div class="polaroid-inner">
+                <div class="polaroid-face">
+                  <div class="tape"></div>
+                  <div class="photo">
+                    <img src="assets/research-note-card.png" alt="杨嘉莉研究手账卡" width="1200" height="1500">
+                  </div>
+                  <span class="label">agent notebook</span>
+                </div>
+                <div class="polaroid-face polaroid-back-face">
+                  <div class="tape pink"></div>
+                  <div class="photo">
+                    <img src="assets/agent-systems-map.png" alt="Agent systems research map" width="1800" height="1200">
+                  </div>
+                  <span class="label">systems map</span>
+                </div>
+              </div>
+            </div>
+            <span class="photo-annotation">Jiali Yang</span>
           </div>
-          <div class="hero-actions">
-            <a class="button primary" href="assets/Yang_Jiali_CV.pdf" target="_blank" rel="noopener">Download CV</a>
-            <a class="button" href="mailto:10234804407@stu.ecnu.edu.cn">Email</a>
-            <a class="button" href="https://github.com/NinjaKelly" target="_blank" rel="noopener">GitHub</a>
+
+          <div class="hero-text reveal reveal-delay-1">
+            <div class="hero-text-tape"></div>
+            <p class="eyebrow">ECNU CS Honors · 2027</p>
+            <h1>Hey, I'm <em>杨嘉莉</em> <span>Jiali</span></h1>
+            <p class="subtitle" id="typewriterTarget"></p>
+            <div class="tags">
+              <span class="tag">LLM Agent</span>
+              <span class="tag">Trusted AI</span>
+              <span class="tag">Long-context Reasoning</span>
+              <span class="tag">Multi-agent Collaboration</span>
+              <span class="tag">Efficient LLM Systems</span>
+              <span class="tag">GPA 3.84 / 4.0</span>
+              <span class="tag">Rank 2 / 25</span>
+            </div>
+            <nav class="hero-nav" aria-label="页面导航">
+              <a href="#about">关于我 <span>About</span></a>
+              <a href="#research">科研经历 <span>Research</span></a>
+              <a href="#projects">项目经历 <span>Projects</span></a>
+              <a href="#awards">荣誉奖项 <span>Awards</span></a>
+            </nav>
           </div>
         </div>
 
-        <figure class="hero-visual" data-reveal>
-          <img src="assets/agent-systems-map.png" alt="Agent systems research map showing trusted agent, tool governance, memory, RAG, evidence tracking, and collaboration." width="1800" height="1200">
-          <figcaption>
-            Research map: governance, memory, evidence, and collaboration in reliable agent systems.
-          </figcaption>
-        </figure>
-      </section>
+        <div class="float-el star" style="top:10%;left:4%;">✧</div>
+        <div class="float-el star" style="top:72%;right:6%;animation-delay:2s;">✦</div>
+        <div class="float-el star" style="top:42%;left:94%;animation-delay:4s;">⋆</div>
+      </div>
+    </section>
 
-      <section class="metrics-strip" aria-label="关键数据" data-reveal>
-        <div>
-          <strong>3.84 / 4.0</strong>
-          <span>GPA</span>
-        </div>
-        <div>
-          <strong>2 / 25</strong>
-          <span>专业排名</span>
-        </div>
-        <div>
-          <strong>TOEFL 106</strong>
-          <span>英语能力</span>
-        </div>
-        <div>
-          <strong>National Scholarship</strong>
-          <span>国家奖学金</span>
-        </div>
-      </section>
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title reveal">关于我</h2>
+        <div class="about-journal reveal">
+          <div class="float-embellish" style="top:16px;right:36px;">✧</div>
+          <div class="float-embellish d2" style="bottom:46px;left:24px;">✦</div>
+          <div class="journal-inner">
+            <div class="about-photo-frame reveal">
+              <div class="photo-corner tl"></div>
+              <div class="photo-corner tr"></div>
+              <div class="photo-corner bl"></div>
+              <div class="photo-corner br"></div>
+              <div class="washi-strip w1"></div>
+              <div class="washi-strip w2"></div>
+              <img src="assets/research-note-card.png" alt="杨嘉莉研究手账卡">
+            </div>
 
-      <section class="section" id="about">
-        <div class="section-kicker" data-reveal>About</div>
-        <div class="split">
-          <div data-reveal>
-            <h2>计算机科学拔尖班本科生，面向 Agent 可靠性与系统化评测做研究。</h2>
-          </div>
-          <div class="about-card" data-reveal>
-            <h3>华东师范大学</h3>
-            <p class="muted">计算机科学拔尖班 · 本科 · 2023.09 - 2027.06</p>
-            <p>
-              研究兴趣聚焦可信智能体与多智能体协作、知识增强与长程推理、模型可靠性评测及高效推理系统；关注复杂任务中的工具调用治理、执行轨迹审计与长期记忆机制。
-            </p>
-            <div class="course-list">
-              <span>大语言模型</span>
-              <span>自然语言处理</span>
-              <span>计算机视觉</span>
-              <span>操作系统</span>
-              <span>计算机网络</span>
-              <span>编译原理</span>
+            <div class="about-copy">
+              <div class="letter-card reveal reveal-delay-1">
+                <div class="letter-stamp">ECNU</div>
+                <h3>华东师范大学</h3>
+                <p class="letter-sub">计算机科学拔尖班 · 本科 · 2023.09 - 2027.06</p>
+                <div class="metric-row">
+                  <span>GPA 3.84 / 4.0</span>
+                  <span>专业排名 2 / 25</span>
+                  <span>TOEFL 106</span>
+                  <span>CET-6 616</span>
+                </div>
+                <p>
+                  我关注可信智能体与多智能体协作、知识增强与长程推理、模型可靠性评测及高效推理系统；尤其关心复杂任务里的工具调用治理、执行轨迹审计与长期记忆机制。
+                </p>
+              </div>
+
+              <div class="sticky-notes-row reveal reveal-delay-2">
+                <div class="skill-sticky">
+                  <h4>研究关键词</h4>
+                  <p>Agent 架构 · RAG · 长程交互 · 可信评测</p>
+                </div>
+                <div class="skill-sticky tilt">
+                  <h4>工程工具</h4>
+                  <p>Python · PyTorch · Transformers · Docker · Linux</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      <section class="section" id="research">
-        <div class="section-heading" data-reveal>
-          <div>
-            <div class="section-kicker">Research Interests</div>
-            <h2>从能力到系统，从输出到证据链。</h2>
+          <div class="research-tags reveal reveal-delay-2">
+            <span>大语言模型</span>
+            <span>自然语言处理</span>
+            <span>操作系统</span>
+            <span>计算机网络</span>
+            <span>编译原理</span>
+            <span>数据管理系统</span>
           </div>
-          <p>
-            我更关心 Agent 在长程任务中的可控性、边界、记忆和责任归因：它如何调用工具，如何协作，如何保留证据，又如何在多轮交互后仍保持目标一致。
-          </p>
+          <p class="handwrite reveal">↳ 把模型能力落到可运行、可审计、可复现的系统里</p>
         </div>
+      </div>
+    </section>
 
-        <div class="interest-grid">
-          <article class="interest-card" data-reveal>
-            <span>01</span>
-            <h3>Trusted Agent Systems</h3>
-            <p>面向工具调用、权限控制、执行轨迹和隐私风险，构建更可审计的自主智能体运行机制。</p>
-          </article>
-          <article class="interest-card" data-reveal>
-            <span>02</span>
-            <h3>Multi-agent Collaboration</h3>
-            <p>研究 Agent 间的关系建模、任务交接和责任边界，让多智能体协作从自然语言约定走向结构化协议。</p>
-          </article>
-          <article class="interest-card" data-reveal>
-            <span>03</span>
-            <h3>Knowledge-enhanced Reasoning</h3>
-            <p>结合 Dynamic RAG、证据追踪和双轨记忆，提升长程交互里的论据召回、上下文连贯性和事实可靠性。</p>
-          </article>
-          <article class="interest-card" data-reveal>
-            <span>04</span>
-            <h3>Efficient LLM Systems</h3>
-            <p>从训练、推理、数据过滤和并行机制理解大模型系统瓶颈，关注可复现实验流水线与高效算子实现。</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="experience">
-        <div class="section-heading" data-reveal>
-          <div>
-            <div class="section-kicker">Research & Internship</div>
-            <h2>核心科研与实习经历</h2>
-          </div>
-          <p>先放简历中的主线经历，后续可以继续补论文、仓库、demo 或项目截图。</p>
-        </div>
+    <section class="section" id="research">
+      <div class="container">
+        <h2 class="section-title reveal">科研与实习经历</h2>
+        <p class="section-desc reveal reveal-delay-1">Agent reliability, memory, governance, and evidence tracking</p>
 
         <div class="timeline">
-          <article class="timeline-item" data-reveal>
-            <div class="timeline-date">2026.04 - 2026.06</div>
-            <div class="timeline-card">
-              <div class="card-topline">
-                <span>智能体系统</span>
-                <span>复旦微电子集团中央研究院</span>
-              </div>
+          <article class="timeline-item reveal">
+            <button class="tl-card" type="button">
+              <span class="tl-time">2026.04 - 2026.06</span>
               <h3>通用 Agent 协作架构与长期记忆增强研究</h3>
-              <p>
-                扩展 Clawith 多 Agent 协作关系建模能力，设计结构化 handoff envelope，优化自主运行场景下的工具权限治理，并评测 Honcho 与 TencentDB Agent Memory 两类长期记忆方案。
-              </p>
-              <div class="tag-row">
-                <span>Trusted Agent</span>
-                <span>Tool Governance</span>
-                <span>Long-term Memory</span>
-                <span>Graph RAG</span>
+              <p class="tl-company">复旦微电子集团中央研究院 · 智能体系统实习生</p>
+              <p class="tl-summary">围绕多 Agent 协作、结构化任务交接、工具权限治理和长期记忆架构选型，扩展企业协作 Agent 的可靠运行机制。</p>
+              <div class="tl-detail">
+                <span>扩展 Clawith 多 Agent 协作关系建模，将 peer / supervisor / assistant / collaborator 等标签抽象为角色关系图。</span>
+                <span>设计结构化 handoff envelope，统一携带 task id、source / target agent、关系角色、上下文摘要和预期产出。</span>
+                <span>优化工具级权限策略，降低自主周期任务中的越权访问与隐私泄露风险。</span>
+                <span>评测 Honcho 与 TencentDB Agent Memory，为多用户协作 Agent 记忆架构选型提供 benchmark。</span>
               </div>
-            </div>
+            </button>
           </article>
 
-          <article class="timeline-item" data-reveal>
-            <div class="timeline-date">2025.12 - 2026.01</div>
-            <div class="timeline-card">
-              <div class="card-topline">
-                <span>大模型微调与智能体</span>
-                <span>学院项目评审第 1 名</span>
-              </div>
+          <article class="timeline-item reveal">
+            <button class="tl-card" type="button">
+              <span class="tl-time">2025.12 - 2026.01</span>
               <h3>面向长程交互可靠性的可控 LLM Agent 研究</h3>
-              <p>
-                构建多轮辩论 Agent 原型，设计立场漂移检测、论据溯源与阶段化攻防策略；构建约 3 万条专项指令数据集并进行三阶段 LoRA 微调。
-              </p>
-              <div class="result-grid">
-                <span><b>96%+</b> 目标一致性</span>
-                <span><b>92%</b> 关键论据召回率</span>
-                <span><b>-38%</b> 长程幻觉率</span>
+              <p class="tl-company">大模型微调与智能体 · 项目负责人 · 学院项目评审第 1 名</p>
+              <p class="tl-summary">构建多轮辩论 Agent 原型，通过立场漂移检测、证据追踪和三阶段 LoRA 微调提升长程交互稳定性。</p>
+              <div class="tl-detail">
+                <span>构建约 3 万条专项指令数据集，覆盖立场保持、论证补强、反驳生成、证据引用与不确定性表达。</span>
+                <span>引入 Dynamic RAG 与“双轨记忆”机制，增强证据回溯能力与上下文连贯性。</span>
+                <span>目标一致性维持在 96% 以上，较基线提升 45%；关键论据召回率达 92%，长程对话幻觉率降低 38%。</span>
               </div>
-            </div>
+            </button>
           </article>
 
-          <article class="timeline-item" data-reveal>
-            <div class="timeline-date">2024.12 - 2025.03</div>
-            <div class="timeline-card">
-              <div class="card-topline">
-                <span>可信人工智能</span>
-                <span>国家发明专利 · 学生排名 2</span>
-              </div>
+          <article class="timeline-item reveal">
+            <button class="tl-card" type="button">
+              <span class="tl-time">2024.12 - 2025.03</span>
               <h3>基于扩散模型的两阶段后门样本净化与防御研究</h3>
-              <p>
-                参与提出“全局轻量净化 + 局部高强度修复”的两阶段扩散去毒框架，主导设计基于 SSIM 结构相似性的触发器定位算法。
-              </p>
-              <div class="result-grid">
-                <span><b>6.15%</b> 以下 ASR</span>
-                <span><b>90%+</b> 分类准确率</span>
-                <span><b>202511807335.9</b> 专利申请</span>
+              <p class="tl-company">可信人工智能 · 国家发明专利 · 学生排名 2</p>
+              <p class="tl-summary">参与提出“全局轻量净化 + 局部高强度修复”的扩散去毒框架，主导 SSIM 触发器定位算法设计。</p>
+              <div class="tl-detail">
+                <span>针对防御效果与图像语义保真之间的权衡问题，完成实验验证与专利材料撰写。</span>
+                <span>在 CIFAR-10 / GTSRB 等基准上将后门攻击成功率从 90%+ 压制至 6.15% 以下，同时保持分类准确率 90%+。</span>
+                <span>国家发明专利 202511807335.9，实质审查阶段。</span>
               </div>
-            </div>
+            </button>
           </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section" id="projects">
-        <div class="section-heading" data-reveal>
-          <div>
-            <div class="section-kicker">Selected Projects</div>
-            <h2>项目会继续迭代成 case studies。</h2>
-          </div>
-          <p>这里先按简历建立项目卡片，等你把具体项目资料发来后，我会补充截图、链接、技术亮点和结果展示。</p>
-        </div>
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title reveal">项目经历</h2>
+        <p class="section-desc reveal reveal-delay-1">先按简历搭好卡片，等你发项目详情后继续补截图、链接和 case study。</p>
 
-        <div class="project-grid">
-          <article class="project-card" data-reveal>
-            <div class="project-meta">2025.09 - 2025.12 · A1 Leaderboard 14/70</div>
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="proj-tab">LLM Systems</div>
             <h3>大语言模型系统构建</h3>
-            <p>独立实现 BPE、Transformer Decoder、训练循环、采样生成与评估模块，完成从数据处理到预训练和推理评测的 LLM 系统闭环。</p>
-            <div class="tag-row">
-              <span>LLM Pretraining</span>
+            <p>独立实现 BPE、Transformer Decoder、训练循环、采样生成与评估模块，完成从数据处理、模型预训练到推理评测的系统闭环。</p>
+            <div class="project-metrics">
+              <span>CS336</span>
+              <span>A1 Rank 14 / 70</span>
               <span>FlashAttention</span>
-              <span>Parallelism</span>
             </div>
+            <img src="assets/agent-systems-map.png" alt="大语言模型系统构建示意图" class="project-shot">
           </article>
-          <article class="project-card" data-reveal>
-            <div class="project-meta">2025.04 - 2026.05 · 国家级创新创业项目</div>
-            <h3>具身绘画机器人系统</h3>
+
+          <article class="project-card reveal reveal-delay-1">
+            <div class="proj-tab soft">Embodied AI</div>
+            <h3>面向多模态生成与实时执行的具身绘画机器人系统</h3>
             <p>参与构建图像生成、轨迹规划、实时通信与机械臂控制链路，负责 EtherCAT 协议栈在 SylixOS 上的移植与驱动适配。</p>
-            <div class="tag-row">
-              <span>Embodied System</span>
+            <div class="project-metrics">
+              <span>国家级大创</span>
               <span>SylixOS</span>
-              <span>EtherCAT</span>
+              <span>1ms 硬实时通信</span>
             </div>
+            <img src="assets/research-note-card.png" alt="具身绘画机器人项目手账图" class="project-shot">
           </article>
-          <article class="project-card" data-reveal>
-            <div class="project-meta">2026.04 · 全国第五</div>
-            <h3>腾讯云智能渗透挑战赛</h3>
-            <p>参与构建以 LLM 为核心的自主渗透 Agent Harness，整理漏洞知识库、工具调用规范与阶段性结果校验流程。</p>
-            <div class="tag-row">
-              <span>Security Agent</span>
+
+          <article class="project-card reveal reveal-delay-2">
+            <div class="proj-tab gray">Security Agent</div>
+            <h3>腾讯云黑客松 · 智能渗透挑战赛决赛</h3>
+            <p>参与构建以 LLM 为核心的自主渗透 Agent Harness，整理漏洞知识库、工具调用规范和结果校验流程。</p>
+            <div class="project-metrics">
+              <span>全国第五</span>
               <span>CTF Harness</span>
               <span>Tool Use</span>
             </div>
+            <img src="assets/agent-systems-map.png" alt="安全 Agent 项目示意图" class="project-shot">
           </article>
-          <article class="project-card" data-reveal>
-            <div class="project-meta">2025.02 · NTU 科研交流</div>
-            <h3>Agent-in-the-Loop 微调数据集构建</h3>
+
+          <article class="project-card reveal reveal-delay-2">
+            <div class="proj-tab pale">Data Engine</div>
+            <h3>Agent-in-the-Loop 微调数据集自动化构建</h3>
             <p>面向企业 BI 场景构建 instruction tuning 数据工程流程，设计 Planner、Generator、Critic、Verifier 与 Refiner 五阶段质量控制。</p>
-            <div class="tag-row">
-              <span>Instruction Data</span>
+            <div class="project-metrics">
+              <span>NTU 交流</span>
               <span>LLM-as-a-Judge</span>
               <span>Data Quality</span>
             </div>
+            <img src="assets/research-note-card.png" alt="数据集自动化构建项目示意图" class="project-shot">
           </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section" id="skills">
-        <div class="section-heading" data-reveal>
-          <div>
-            <div class="section-kicker">Skills</div>
-            <h2>研究、工程和系统基础并行。</h2>
+    <section class="section" id="awards">
+      <div class="container">
+        <h2 class="section-title reveal">荣誉奖项</h2>
+        <div class="award-list">
+          <article class="award-card reveal">
+            <div class="seal">奖学金</div>
+            <h3>国家奖学金</h3>
+            <p>同时获校优秀学生奖学金、校优秀学生等荣誉。</p>
+          </article>
+          <article class="award-card reveal reveal-delay-1">
+            <div class="seal">国三</div>
+            <h3>全国大学生计算机系统能力大赛</h3>
+            <p>操作系统设计赛道国家三等奖。</p>
+          </article>
+          <article class="award-card reveal reveal-delay-1">
+            <div class="seal">Top5</div>
+            <h3>腾讯云智能渗透挑战赛</h3>
+            <p>所在团队进入决赛并获全国第五。</p>
+          </article>
+          <article class="award-card reveal reveal-delay-2">
+            <div class="seal">专利</div>
+            <h3>国家发明专利</h3>
+            <p>扩散模型后门样本净化与防御相关专利，学生排名 2。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card reveal">
+          <div class="contact-tape"></div>
+          <h2>很高兴认识你 ✦</h2>
+          <p class="handwrite">欢迎交流 Agent 系统、可信 AI 与 LLM 训练推理</p>
+          <p class="contact-meta">10234804407@stu.ecnu.edu.cn · GitHub @NinjaKelly</p>
+          <div class="contact-links">
+            <a href="mailto:10234804407@stu.ecnu.edu.cn">Email</a>
+            <a href="https://github.com/NinjaKelly" target="_blank" rel="noopener">GitHub</a>
+            <a href="assets/Yang_Jiali_CV.pdf" target="_blank" rel="noopener">下载简历</a>
           </div>
         </div>
-
-        <div class="skill-columns">
-          <div class="skill-panel" data-reveal>
-            <h3>Research</h3>
-            <p>RAG / Agent 架构 / 模型可靠性评测 / 长程交互 / 实验设计 / 专利材料撰写</p>
-          </div>
-          <div class="skill-panel" data-reveal>
-            <h3>Engineering</h3>
-            <p>Python / PyTorch / Transformers / PEFT / Docker / Linux / 自动化评测 / 数据清洗</p>
-          </div>
-          <div class="skill-panel" data-reveal>
-            <h3>Systems</h3>
-            <p>操作系统 / 计算机网络 / 数据库 / 编译原理 / FlashAttention / 张量并行 / RTOS 驱动适配</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section contact-section" id="contact">
-        <div class="contact-card" data-reveal>
-          <div>
-            <div class="section-kicker">Contact</div>
-            <h2>欢迎交流 Agent 系统、可信 AI 和 LLM 训练推理相关问题。</h2>
-            <p>目前主页是 v1 骨架版，后续会继续补充项目详情、截图、论文或代码链接。</p>
-          </div>
-          <div class="contact-actions">
-            <a class="button primary" href="mailto:10234804407@stu.ecnu.edu.cn">10234804407@stu.ecnu.edu.cn</a>
-            <a class="button" href="https://github.com/NinjaKelly" target="_blank" rel="noopener">GitHub: NinjaKelly</a>
-            <a class="button" href="assets/Yang_Jiali_CV.pdf" target="_blank" rel="noopener">CV PDF</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <span>Jiali Yang</span>
-      <span>Built for research, systems, and reliable agents.</span>
-    </footer>
-  </div>
+        <p class="footer-note">杨嘉莉 · Made with AI · 2026</p>
+      </div>
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>
