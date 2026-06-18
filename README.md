@@ -1,6 +1,6 @@
 # NinjaKelly.github.io
 
-Personal academic homepage for Jiali Yang.
+Personal academic homepage for Kelly Yang.
 
 ## Local Preview
 

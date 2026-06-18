@@ -229,6 +229,20 @@ button {
   object-fit: cover;
 }
 
+.polaroid .photo-stack {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 8px;
+  padding: 0;
+  background: #fff;
+}
+
+.polaroid .photo-stack img {
+  min-height: 0;
+  border: 1px solid var(--gray-100);
+  object-fit: cover;
+}
+
 .polaroid .label {
   position: absolute;
   left: 0;
@@ -740,6 +754,33 @@ button {
   background: var(--pink-400);
 }
 
+.tl-media {
+  margin-top: 16px;
+}
+
+.tl-media img {
+  width: 100%;
+  border: 8px solid #fff;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  object-fit: cover;
+}
+
+.tl-media:not(.patent-gallery) img {
+  aspect-ratio: 1672 / 941;
+  height: auto;
+}
+
+.patent-gallery {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.patent-gallery img {
+  height: 160px;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -992,13 +1033,14 @@ button {
   }
 
   .polaroid {
-    width: 220px;
-    height: 326px;
+    --polaroid-w: min(220px, 78vw);
+    width: var(--polaroid-w);
+    height: calc(var(--polaroid-w) * 1.482);
   }
 
   .polaroid .photo {
-    width: 194px;
-    height: 234px;
+    width: calc(var(--polaroid-w) - 26px);
+    height: calc(var(--polaroid-w) * 1.064);
   }
 
   .section {
@@ -1063,6 +1105,42 @@ button {
 
   .contact-links a {
     width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-doodle {
+    display: none;
+  }
+
+  .photo-annotation {
+    right: 0;
+  }
+
+  .timeline::before {
+    left: 12px;
+  }
+
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    padding-left: 32px;
+  }
+
+  .timeline-item::before,
+  .timeline-item:nth-child(even)::before {
+    left: 7px;
+  }
+
+  .tl-card {
+    padding: 18px;
+  }
+
+  .tl-detail span {
+    padding-left: 10px;
+  }
+
+  .patent-gallery {
+    grid-template-columns: 1fr;
   }
 }
 
