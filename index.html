@@ -203,7 +203,64 @@
     <section class="section" id="projects">
       <div class="container">
         <h2 class="section-title reveal">项目经历</h2>
-        <p class="section-desc reveal reveal-delay-1">先按简历搭好卡片，等你发项目详情后继续补截图、链接和 case study。</p>
+        <p class="section-desc reveal reveal-delay-1">从底层系统移植到上层智能应用，把模型、协议栈和真实设备接成可运行的闭环。</p>
+
+        <article class="featured-project reveal">
+          <div class="featured-copy">
+            <div class="proj-tab soft">Embodied AI · Real-time OS</div>
+            <h3>基于 SylixOS 的六轴绘画机器人系统</h3>
+            <p>
+              国家级大学生创新训练项目。团队构建了一套融合国产实时操作系统、EtherCAT 工业通信、六轴机械臂运动控制与 AI 图像处理的自动绘画系统，
+              形成“图像输入 - 路径规划 - 实时控制 - 机器人绘制”的端到端链路。
+            </p>
+            <div class="robot-metric-strip">
+              <span><strong>1 ms</strong> EtherCAT 周期通信</span>
+              <span><strong>6-axis</strong> 多伺服同步控制</span>
+              <span><strong>国三</strong> 操作系统设计赛</span>
+            </div>
+            <div class="project-actions">
+              <a href="assets/robot-project-poster.pptx" target="_blank" rel="noopener">查看展板 PPTX</a>
+              <a href="assets/robot-system-architecture.webp" target="_blank" rel="noopener">系统架构图</a>
+            </div>
+          </div>
+          <div class="featured-media">
+            <img src="assets/robot-sketch-comparison.webp" alt="绘画机器人从照片到线稿的效果对比" class="project-shot" width="980" height="520" loading="lazy">
+            <span class="media-caption">AI 视觉处理将人物图像转换为可执行绘图路径</span>
+          </div>
+        </article>
+
+        <div class="robot-case reveal reveal-delay-1">
+          <div class="case-column">
+            <h4>我会这样讲这个项目</h4>
+            <p>
+              不把它只讲成“机器人会画画”，而是讲成一次系统工程：先把 IGH EtherCAT Master 移植到国产 SylixOS，
+              建立 1ms 周期主从通信，再在六轴机械臂上接入轨迹规划、安全状态机和图像到路径的 AI 流水线。
+            </p>
+          </div>
+          <div class="case-column">
+            <h4>我的技术贡献</h4>
+            <ul>
+              <li>参与 EtherCAT 主站协议栈在 SylixOS 上的移植、编译与驱动适配。</li>
+              <li>完成伺服从站识别、PDO 映射、状态回读与周期通信链路验证。</li>
+              <li>参与机器人控制联调，围绕上电状态机、轨迹执行与稳定性问题做调试。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="robot-gallery reveal reveal-delay-2">
+          <figure>
+            <img src="assets/robot-system-architecture.webp" alt="六轴绘画机器人系统架构图" class="project-shot" width="1400" height="758" loading="lazy">
+            <figcaption>系统架构：SylixOS + EtherCAT + AI 视觉处理</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/robot-pipeline-flow.webp" alt="绘画机器人工作流程图" class="project-shot" width="1084" height="739" loading="lazy">
+            <figcaption>工作流：图像处理、路径生成、机器人执行</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/robot-os-award.webp" alt="操作系统设计赛获奖证书" class="project-shot" width="659" height="461" loading="lazy">
+            <figcaption>2025 操作系统设计赛国家三等奖</figcaption>
+          </figure>
+        </div>
 
         <div class="projects-grid">
           <article class="project-card reveal">
@@ -221,13 +278,13 @@
           <article class="project-card reveal reveal-delay-1">
             <div class="proj-tab soft">Embodied AI</div>
             <h3>面向多模态生成与实时执行的具身绘画机器人系统</h3>
-            <p>参与构建图像生成、轨迹规划、实时通信与机械臂控制链路，负责 EtherCAT 协议栈在 SylixOS 上的移植与驱动适配。</p>
+            <p>参与构建图像生成、轨迹规划、实时通信与机械臂控制链路，重点推进 EtherCAT 协议栈在 SylixOS 上的移植与驱动适配。</p>
             <div class="project-metrics">
               <span>国家级大创</span>
               <span>SylixOS</span>
               <span>1ms 硬实时通信</span>
             </div>
-            <img src="assets/research-note-card.png" alt="具身绘画机器人项目手账图" class="project-shot">
+            <img src="assets/robot-servo-demo.webp" alt="EtherCAT 伺服模块联调现场" class="project-shot" width="385" height="217" loading="lazy">
           </article>
 
           <article class="project-card reveal reveal-delay-2">
