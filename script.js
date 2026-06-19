@@ -42,7 +42,7 @@ if (cursor && cursorDot && window.matchMedia("(min-width: 769px)").matches) {
   };
   animateCursor();
 
-  const interactiveSelector = "a, button, .polaroid, .tag, .skill-sticky, .project-shot";
+  const interactiveSelector = "a, button, .polaroid, .tag, .skill-sticky, .project-shot, .tl-media img";
   document.addEventListener("mouseover", (event) => {
     if (event.target.closest(interactiveSelector)) cursor.classList.add("hover");
   });
@@ -83,8 +83,9 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
-document.querySelectorAll(".project-shot").forEach((shot) => {
-  shot.addEventListener("click", () => {
+document.querySelectorAll(".project-shot, .tl-media img").forEach((shot) => {
+  shot.addEventListener("click", (event) => {
+    event.stopPropagation();
     const overlay = document.createElement("div");
     overlay.className = "shot-overlay";
     overlay.innerHTML = `<img src="${shot.src}" alt="${shot.alt}">`;

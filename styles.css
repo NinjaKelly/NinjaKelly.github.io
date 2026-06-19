@@ -762,6 +762,7 @@ button {
   width: 100%;
   border: 8px solid #fff;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  cursor: zoom-in;
   object-fit: cover;
 }
 
