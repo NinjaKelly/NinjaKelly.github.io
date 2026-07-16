@@ -120,8 +120,8 @@ img {
 }
 
 .portrait {
-  width: 160px;
-  height: 198px;
+  width: 140px;
+  height: 174px;
   object-fit: cover;
   object-position: center 25%;
   border-radius: 4px;
@@ -394,8 +394,8 @@ time,
 
   .portrait {
     grid-row: span 5;
-    width: 100px;
-    height: 125px;
+    width: 88px;
+    height: 110px;
   }
 
   h1 {
@@ -437,8 +437,8 @@ time,
   }
 
   .portrait {
-    width: 84px;
-    height: 105px;
+    width: 76px;
+    height: 95px;
   }
 
   .facts {
