@@ -1,364 +1,237 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="杨嘉莉 - 华东师范大学计算机科学拔尖班本科生，关注 LLM Agent、可信智能体、知识增强与长程推理。">
-  <title>杨嘉莉 - Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Kelly Jiali Yang, undergraduate student in Computer Science at East China Normal University. Research interests include LLM agents, multi-agent collaboration, trustworthy AI, multimodal safety, and long-horizon reasoning.">
+  <title>Kelly Jiali Yang</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="page-loader" id="loader">
-    <span class="loader-text">正在翻阅...</span>
-  </div>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="noise"></div>
-  <div class="custom-cursor" id="cursor"></div>
-  <div class="custom-cursor-dot" id="cursorDot"></div>
-
-  <a href="#contact" class="top-contact reveal">联系我</a>
-
-  <main>
-    <section class="hero" id="top">
-      <div class="hero-doodle" style="width:180px;height:180px;top:-64px;right:-36px;"></div>
-      <div class="hero-doodle" style="width:120px;height:120px;bottom:90px;left:-36px;animation-delay:-7s;"></div>
-
-      <div class="container">
-        <div class="hero-inner">
-          <div class="polaroid-wrap reveal" id="polaroidWrap">
-            <svg class="paperclip" width="38" height="50" viewBox="0 0 36 48" fill="none" aria-hidden="true">
-              <path d="M18 2 L18 38 Q18 46 12 44 Q6 42 8 36 L8 8 Q8 2 14 2 Q20 2 19 8 L18 36 Q17 42 13 40 Q9 38 10 32 L10 10" stroke="#b0a5ac" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-            <div class="polaroid" id="polaroid">
-              <div class="polaroid-inner">
-                <div class="polaroid-face">
-                  <div class="tape"></div>
-                  <div class="photo">
-                    <img src="assets/my-photo-front.jpg" alt="杨嘉莉照片" width="675" height="900" loading="eager">
-                  </div>
-                  <span class="label">agent notebook</span>
-                </div>
-                <div class="polaroid-face polaroid-back-face">
-                  <div class="tape pink"></div>
-                  <div class="photo photo-stack">
-                    <img src="assets/my-photo-back-1.jpg" alt="杨嘉莉生活照 1" width="1200" height="900" loading="lazy">
-                    <img src="assets/my-photo-back-2.jpg" alt="杨嘉莉生活照 2" width="1200" height="783" loading="lazy">
-                  </div>
-                  <span class="label">systems map</span>
-                </div>
-              </div>
-            </div>
-            <span class="photo-annotation">Kelly Yang</span>
-          </div>
-
-          <div class="hero-text reveal reveal-delay-1">
-            <div class="hero-text-tape"></div>
-            <p class="eyebrow">ECNU CS Honors · 2027</p>
-            <h1>Hey, I'm <em>杨嘉莉</em> <span>Kelly</span></h1>
-            <p class="subtitle" id="typewriterTarget"></p>
-            <div class="tags">
-              <span class="tag">LLM Agent</span>
-              <span class="tag">Trusted AI</span>
-              <span class="tag">Long-context Reasoning</span>
-              <span class="tag">Multi-agent Collaboration</span>
-              <span class="tag">Efficient LLM Systems</span>
-              <span class="tag">GPA 3.84 / 4.0</span>
-              <span class="tag">Rank 2 / 25</span>
-            </div>
-            <nav class="hero-nav" aria-label="页面导航">
-              <a href="#about">关于我 <span>About</span></a>
-              <a href="#research">科研经历 <span>Research</span></a>
-              <a href="#projects">项目经历 <span>Projects</span></a>
-              <a href="#awards">荣誉奖项 <span>Awards</span></a>
-            </nav>
-          </div>
-        </div>
-
-        <div class="float-el star" style="top:10%;left:4%;">✧</div>
-        <div class="float-el star" style="top:72%;right:6%;animation-delay:2s;">✦</div>
-        <div class="float-el star" style="top:42%;left:94%;animation-delay:4s;">⋆</div>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="site-title" href="#top">Kelly Jiali Yang</a>
+      <div class="nav-links">
+        <a href="#research">Research</a>
+        <a href="#work">Selected Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#honors">Honors</a>
       </div>
-    </section>
+    </nav>
+  </header>
 
-    <section class="section" id="about">
-      <div class="container">
-        <h2 class="section-title reveal">关于我</h2>
-        <div class="about-journal reveal">
-          <div class="float-embellish" style="top:16px;right:36px;">✧</div>
-          <div class="float-embellish d2" style="bottom:46px;left:24px;">✦</div>
-          <div class="journal-inner">
-            <div class="about-photo-frame reveal">
-              <div class="photo-corner tl"></div>
-              <div class="photo-corner tr"></div>
-              <div class="photo-corner bl"></div>
-              <div class="photo-corner br"></div>
-              <div class="washi-strip w1"></div>
-              <div class="washi-strip w2"></div>
-              <img src="assets/research-note-card.png" alt="杨嘉莉研究手账卡">
-            </div>
+  <main class="page" id="main">
+    <aside class="profile" id="top">
+      <img class="portrait" src="assets/Photo_Yang_Jiali.jpg" alt="Kelly Jiali Yang" width="1500" height="2100">
+      <h1>Kelly Jiali Yang</h1>
+      <p class="name-cn">杨嘉莉</p>
+      <p class="role">B.S. candidate in Computer Science, 2027</p>
+      <p class="affiliation">East China Normal University</p>
 
-            <div class="about-copy">
-              <div class="letter-card reveal reveal-delay-1">
-                <div class="letter-stamp">ECNU</div>
-                <h3>华东师范大学</h3>
-                <p class="letter-sub">计算机科学拔尖班 · 本科 · 2023.09 - 2027.06</p>
-                <div class="metric-row">
-                  <span>GPA 3.84 / 4.0</span>
-                  <span>专业排名 2 / 25</span>
-                  <span>TOEFL 106 · CET-6 616 · CET-4 657</span>
-                </div>
-                <p>
-                  我关注可信智能体与多智能体协作、知识增强与长程推理、模型可靠性评测及高效推理系统；尤其关心复杂任务里的工具调用治理、执行轨迹审计与长期记忆机制。
-                </p>
-              </div>
-
-              <div class="sticky-notes-row reveal reveal-delay-2">
-                <div class="skill-sticky">
-                  <h4>研究关键词</h4>
-                  <p>Agent 架构 · RAG · 长程交互 · 可信评测</p>
-                </div>
-                <div class="skill-sticky tilt">
-                  <h4>工程工具</h4>
-                  <p>Python · PyTorch · Transformers · Docker · Linux</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="research-tags reveal reveal-delay-2">
-            <span>大语言模型</span>
-            <span>自然语言处理</span>
-            <span>操作系统</span>
-            <span>计算机网络</span>
-            <span>编译原理</span>
-            <span>数据管理系统</span>
-          </div>
-          <p class="handwrite reveal">↳ 把模型能力落到可运行、可审计、可复现的系统里</p>
-        </div>
+      <div class="profile-links" aria-label="Profile links">
+        <a href="mailto:10234804407@stu.ecnu.edu.cn">Email</a>
+        <a href="https://github.com/NinjaKelly" target="_blank" rel="noopener">GitHub</a>
+        <a href="assets/简历_杨嘉莉_华师大夏令营0714.pdf" target="_blank" rel="noopener">CV</a>
       </div>
-    </section>
 
-    <section class="section" id="research">
-      <div class="container">
-        <h2 class="section-title reveal">科研与实习经历</h2>
-        <p class="section-desc reveal reveal-delay-1">Agent reliability, memory, governance, and evidence tracking</p>
+      <dl class="facts">
+        <div>
+          <dt>GPA</dt>
+          <dd>3.84 / 4.0</dd>
+        </div>
+        <div>
+          <dt>Rank</dt>
+          <dd>2 / 25</dd>
+        </div>
+        <div>
+          <dt>English</dt>
+          <dd>TOEFL 106, CET-6 616</dd>
+        </div>
+      </dl>
+    </aside>
 
-        <div class="timeline">
-          <article class="timeline-item reveal">
-            <button class="tl-card" type="button">
-              <span class="tl-time">2026.04 - 2026.06</span>
-              <h3>通用 Agent 协作架构与长期记忆增强研究</h3>
-              <p class="tl-company">复旦微电子集团中央研究院 · 智能体系统实习生</p>
-              <p class="tl-summary">围绕多 Agent 协作、结构化任务交接、工具权限治理和长期记忆架构选型，扩展企业协作 Agent 的可靠运行机制。</p>
-              <div class="tl-detail">
-                <span>扩展 Clawith 多 Agent 协作关系建模，将 peer / supervisor / assistant / collaborator 等标签抽象为角色关系图。</span>
-                <span>设计结构化 handoff envelope，统一携带 task id、source / target agent、关系角色、上下文摘要和预期产出。</span>
-                <span>优化工具级权限策略，降低自主周期任务中的越权访问与隐私泄露风险。</span>
-                <span>评测 Honcho 与 TencentDB Agent Memory，为多用户协作 Agent 记忆架构选型提供 benchmark。</span>
-              </div>
-            </button>
+    <div class="content">
+      <section class="section about" aria-labelledby="about-title">
+        <h2 id="about-title">About</h2>
+        <p>
+          I am an undergraduate student in the Computer Science Honors Program at East China Normal University. My work focuses on reliable LLM agents, multi-agent collaboration, long-term memory, trustworthy multimodal AI, and long-horizon reasoning.
+        </p>
+        <p>
+          I am currently a research intern at Shanghai AI Laboratory, working on data agents, agentic reinforcement learning, and memory mechanisms for long-horizon autonomous agents. I previously interned at Fudan Microelectronics Group, where I worked on enterprise multi-agent collaboration and task governance.
+        </p>
+        <p>
+          I am interested in building agent systems that are not only capable, but also traceable, controllable, and robust under long interactions.
+        </p>
+      </section>
+
+      <section class="section news" aria-labelledby="news-title">
+        <h2 id="news-title">News</h2>
+        <ul class="news-list">
+          <li><time datetime="2026-07">Jul 2026</time><span>Started AgentDoG-Lite, a personal project on LLM agent safety diagnosis with LoRA SFT and DPO.</span></li>
+          <li><time datetime="2026-06">Jun 2026</time><span>Joined Shanghai AI Laboratory as a research intern on data agents and agent memory.</span></li>
+          <li><time datetime="2026-04">Apr 2026</time><span>Started first-author work on closed-form visual connector editing for multimodal model backdoors.</span></li>
+          <li><time datetime="2025-12">Dec 2025</time><span>Led DialecticFlow, a controllable debate LLM agent for reliable long-form interaction.</span></li>
+          <li><time datetime="2025-08">Aug 2025</time><span>Won National Third Prize in the Operating System Design Track of the National College Computer System Capability Competition.</span></li>
+        </ul>
+      </section>
+
+      <section class="section" id="research" aria-labelledby="research-title">
+        <h2 id="research-title">Research Interests</h2>
+        <div class="interest-grid">
+          <article>
+            <h3>Reliable LLM Agents</h3>
+            <p>Long-horizon interaction, controllable generation, evidence tracking, task decomposition, and diagnostic rewriting.</p>
           </article>
-
-          <article class="timeline-item reveal">
-            <button class="tl-card" type="button">
-              <span class="tl-time">2025.12 - 2026.01</span>
-              <h3>面向长程交互可靠性的可控 LLM Agent 研究</h3>
-              <p class="tl-company">大模型微调与智能体 · 项目负责人 · 学院项目评审第 1 名</p>
-              <p class="tl-summary">构建多轮辩论 Agent 原型，通过立场漂移检测、证据追踪和三阶段 LoRA 微调提升长程交互稳定性。</p>
-              <div class="tl-detail">
-                <span>构建约 3 万条专项指令数据集，覆盖立场保持、论证补强、反驳生成、证据引用与不确定性表达。</span>
-                <span>引入 Dynamic RAG 与“双轨记忆”机制，增强证据回溯能力与上下文连贯性。</span>
-                <span>目标一致性维持在 96% 以上，较基线提升 45%；关键论据召回率达 92%，长程对话幻觉率降低 38%。</span>
-              </div>
-              <div class="tl-media">
-                <img src="assets/debate-agent-project.png" alt="面向长程交互可靠性的辩论 Agent 项目图" width="1672" height="941" loading="lazy">
-              </div>
-            </button>
+          <article>
+            <h3>Multi-Agent Collaboration</h3>
+            <p>Agent-to-agent communication, structured handoff, relationship-aware task governance, and evidence-preserving synthesis.</p>
           </article>
-
-          <article class="timeline-item reveal">
-            <button class="tl-card" type="button">
-              <span class="tl-time">2024.12 - 2025.03</span>
-              <h3>基于扩散模型的两阶段后门样本净化与防御研究</h3>
-              <p class="tl-company">可信人工智能 · 国家发明专利 · 学生排名 2</p>
-              <p class="tl-summary">参与提出“全局轻量净化 + 局部高强度修复”的扩散去毒框架，主导 SSIM 触发器定位算法设计。</p>
-              <div class="tl-detail">
-                <span>针对防御效果与图像语义保真之间的权衡问题，完成实验验证与专利材料撰写。</span>
-                <span>在 CIFAR-10 / GTSRB 等基准上将后门攻击成功率从 90%+ 压制至 6.15% 以下，同时保持分类准确率 90%+。</span>
-                <span>国家发明专利 202511807335.9，实质审查阶段。</span>
-              </div>
-              <div class="tl-media patent-gallery">
-                <img src="assets/patent-figure-1.png" alt="专利图 1" width="1016" height="1196" loading="lazy">
-                <img src="assets/patent-figure-2.png" alt="专利图 2" width="2460" height="504" loading="lazy">
-              </div>
-            </button>
+          <article>
+            <h3>Trustworthy Multimodal AI</h3>
+            <p>MLLM backdoors, visual connector editing, diffusion purification, trigger localization, and leakage suppression.</p>
+          </article>
+          <article>
+            <h3>LLM Systems</h3>
+            <p>Pretraining pipelines, FlashAttention, parallelism, data filtering, instruction tuning, and agentic data generation.</p>
           </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section" id="projects">
-      <div class="container">
-        <h2 class="section-title reveal">项目经历</h2>
-        <p class="section-desc reveal reveal-delay-1">从底层系统移植到上层智能应用，把模型、协议栈和真实设备接成可运行的闭环。</p>
+      <section class="section" id="work" aria-labelledby="work-title">
+        <h2 id="work-title">Selected Work</h2>
 
-        <article class="featured-project reveal">
-          <div class="featured-copy">
-            <div class="proj-tab soft">Embodied AI · Real-time OS</div>
-            <h3>基于 SylixOS 的六轴绘画机器人系统</h3>
+        <article class="work-item">
+          <div class="work-main">
+            <h3>Rewriting the Vision-Language Bridge: Fast Closed-Form Backdoor Editing for Multimodal Connectors</h3>
+            <p class="meta">First-author manuscript in preparation, 2026</p>
             <p>
-              国家级大学生创新训练项目。团队构建了一套融合国产实时操作系统、EtherCAT 工业通信、六轴机械臂运动控制与 AI 图像处理的自动绘画系统，
-              形成“图像输入 - 路径规划 - 实时控制 - 机器人绘制”的端到端链路。
+              Proposed a training-free closed-form editing method for visual connectors in multimodal large language models. The method formulates targeted backdoor editing as a constrained linear rewrite in connector mapping space, with stealthy visual triggers and Fisher-discriminant-based column gating to reduce semantic leakage.
             </p>
-            <div class="robot-metric-strip">
-              <span><strong>1 ms</strong> EtherCAT 周期通信</span>
-              <span><strong>6-axis</strong> 多伺服同步控制</span>
-              <span><strong>国三</strong> 操作系统设计赛</span>
-            </div>
-            <div class="project-actions">
-              <a href="assets/robot-project-poster.pptx" target="_blank" rel="noopener">查看展板 PPTX</a>
-              <a href="assets/robot-system-architecture.webp" target="_blank" rel="noopener">系统架构图</a>
-            </div>
-          </div>
-          <div class="featured-media">
-            <img src="assets/robot-sketch-comparison.webp" alt="绘画机器人从照片到线稿的效果对比" class="project-shot" width="980" height="520" loading="lazy">
-            <span class="media-caption">AI 视觉处理将人物图像转换为可执行绘图路径</span>
+            <p class="result">In experiments on LLaVA-v1.5-7B, the method achieved about 92% targeted induction success rate while reducing false trigger rate from about 37% to about 18%.</p>
           </div>
         </article>
 
-        <div class="robot-case reveal reveal-delay-1">
-          <div class="case-column">
-            <h4>我会这样讲这个项目</h4>
+        <article class="work-item">
+          <div class="work-main">
+            <h3>Enterprise Multi-Agent Collaboration and Task Governance</h3>
+            <p class="meta">Research internship, Fudan Microelectronics Group, 2026</p>
             <p>
-              不把它只讲成“机器人会画画”，而是讲成一次系统工程：先把 IGH EtherCAT Master 移植到国产 SylixOS，
-              建立 1ms 周期主从通信，再在六轴机械臂上接入轨迹规划、安全状态机和图像到路径的 AI 流水线。
+              Designed a general agent-to-agent collaboration framework for enterprise multi-user scenarios. The system models supervisor, peer, assistant, and collaborator relationships as a directed relation graph, and upgrades natural-language handoff into structured envelopes with task IDs, source and target agents, constraints, completion criteria, and evidence packets.
+            </p>
+            <p class="result">On DDR-Benchmark 10-K tasks, the A2A system reached 76.48% message-wise accuracy and 53.66% trajectory/chat-wise accuracy.</p>
+          </div>
+        </article>
+
+        <article class="work-item">
+          <div class="work-main">
+            <h3>DialecticFlow: A Controllable Debate LLM Agent for Reliable Long-Form Interaction</h3>
+            <p class="meta">Project lead, 2025-2026</p>
+            <p>
+              Built a Qwen2.5-7B-based debate agent with staged LoRA training, stance-aware RAG, dual-track memory, post-generation checking, and diagnostic rewriting for Chinese debate scenarios.
+            </p>
+            <p class="result">The full system improved normalized internal evaluation score from 29.5 to 94.0 across logic, rebuttal precision, stance consistency, closing quality, and AI compliance.</p>
+            <p class="links"><button class="link-button image-trigger" type="button" data-image="assets/debate-agent-project.png" data-alt="DialecticFlow project diagram">Project figure</button></p>
+          </div>
+        </article>
+
+        <article class="work-item">
+          <div class="work-main">
+            <h3>Two-Stage Diffusion Purification for Backdoor Defense</h3>
+            <p class="meta">Patent, student contributor 2, 2024-2025</p>
+            <p>
+              Contributed to a black-box input-side purification framework for image-classification backdoor defense. The method combines global lightweight DDPM perturbation, SSIM-based trigger localization, and local differentiated purification.
+            </p>
+            <p class="result">Reduced attack success rate from over 90% to below 6.15% on CIFAR-10/GTSRB while maintaining at least 90% clean accuracy. Chinese invention patent 202511807335.9 is under substantive examination.</p>
+            <p class="links">
+              <button class="link-button image-trigger" type="button" data-image="assets/patent-figure-1.png" data-alt="Patent figure 1">Figure 1</button>
+              <button class="link-button image-trigger" type="button" data-image="assets/patent-figure-2.png" data-alt="Patent figure 2">Figure 2</button>
             </p>
           </div>
-          <div class="case-column">
-            <h4>我的技术贡献</h4>
-            <ul>
-              <li>参与 EtherCAT 主站协议栈在 SylixOS 上的移植、编译与驱动适配。</li>
-              <li>完成伺服从站识别、PDO 映射、状态回读与周期通信链路验证。</li>
-              <li>参与机器人控制联调，围绕上电状态机、轨迹执行与稳定性问题做调试。</li>
-            </ul>
+        </article>
+
+        <article class="work-item">
+          <div class="work-main">
+            <h3>Embodied Drawing Robot with SylixOS and EtherCAT</h3>
+            <p class="meta">National innovation project, 2025-2026</p>
+            <p>
+              Built an embodied drawing system connecting image generation, sketch conversion, trajectory planning, real-time industrial communication, and six-axis robot execution. I worked on porting the EtherCAT master stack to SylixOS, driver adaptation, IOCTL command reconstruction, and 1 ms cyclic servo communication.
+            </p>
+            <p class="result">The project won National Third Prize in the Operating System Design Track of the National College Computer System Capability Competition.</p>
+            <p class="links">
+              <a href="assets/robot-project-poster.pptx" target="_blank" rel="noopener">Poster PPTX</a>
+              <button class="link-button image-trigger" type="button" data-image="assets/robot-system-architecture.webp" data-alt="Drawing robot system architecture">Architecture</button>
+            </p>
           </div>
-        </div>
+        </article>
 
-        <div class="robot-gallery reveal reveal-delay-2">
-          <figure>
-            <img src="assets/robot-system-architecture.webp" alt="六轴绘画机器人系统架构图" class="project-shot" width="1400" height="758" loading="lazy">
-            <figcaption>系统架构：SylixOS + EtherCAT + AI 视觉处理</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/robot-pipeline-flow.webp" alt="绘画机器人工作流程图" class="project-shot" width="1084" height="739" loading="lazy">
-            <figcaption>工作流：图像处理、路径生成、机器人执行</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/robot-os-award.webp" alt="操作系统设计赛获奖证书" class="project-shot" width="659" height="461" loading="lazy">
-            <figcaption>2025 操作系统设计赛国家三等奖</figcaption>
-          </figure>
-        </div>
-
-        <div class="projects-grid">
-          <article class="project-card reveal">
-            <div class="proj-tab">LLM Systems</div>
-            <h3>大语言模型系统构建</h3>
-            <p>独立实现 BPE、Transformer Decoder、训练循环、采样生成与评估模块，完成从数据处理、模型预训练到推理评测的系统闭环。</p>
-            <div class="project-metrics">
-              <span>CS336</span>
-              <span>A1 Rank 14 / 70</span>
-              <span>FlashAttention</span>
-            </div>
-            <img src="assets/agent-systems-map.png" alt="大语言模型系统构建示意图" class="project-shot">
-          </article>
-
-          <article class="project-card reveal reveal-delay-1">
-            <div class="proj-tab soft">Embodied AI</div>
-            <h3>面向多模态生成与实时执行的具身绘画机器人系统</h3>
-            <p>参与构建图像生成、轨迹规划、实时通信与机械臂控制链路，重点推进 EtherCAT 协议栈在 SylixOS 上的移植与驱动适配。</p>
-            <div class="project-metrics">
-              <span>国家级大创</span>
-              <span>SylixOS</span>
-              <span>1ms 硬实时通信</span>
-            </div>
-            <img src="assets/robot-servo-demo.webp" alt="EtherCAT 伺服模块联调现场" class="project-shot" width="385" height="217" loading="lazy">
-          </article>
-
-          <article class="project-card reveal reveal-delay-2">
-            <div class="proj-tab gray">Security Agent</div>
-            <h3>腾讯云黑客松 · 智能渗透挑战赛决赛</h3>
-            <p>参与构建以 LLM 为核心的自主渗透 Agent Harness，整理漏洞知识库、工具调用规范和结果校验流程。</p>
-            <div class="project-metrics">
-              <span>全国第五</span>
-              <span>CTF Harness</span>
-              <span>Tool Use</span>
-            </div>
-            <img src="assets/agent-systems-map.png" alt="安全 Agent 项目示意图" class="project-shot">
-          </article>
-
-          <article class="project-card reveal reveal-delay-2">
-            <div class="proj-tab pale">Data Engine</div>
-            <h3>Agent-in-the-Loop 微调数据集自动化构建</h3>
-            <p>面向企业 BI 场景构建 instruction tuning 数据工程流程，设计 Planner、Generator、Critic、Verifier 与 Refiner 五阶段质量控制。</p>
-            <div class="project-metrics">
-              <span>NTU 交流</span>
-              <span>LLM-as-a-Judge</span>
-              <span>Data Quality</span>
-            </div>
-            <img src="assets/research-note-card.png" alt="数据集自动化构建项目示意图" class="project-shot">
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="awards">
-      <div class="container">
-        <h2 class="section-title reveal">荣誉奖项</h2>
-        <div class="award-list">
-          <article class="award-card reveal">
-            <div class="seal">奖学金</div>
-            <h3>国家奖学金</h3>
-            <p>同时获校优秀学生奖学金、校优秀学生等荣誉。</p>
-          </article>
-          <article class="award-card reveal reveal-delay-1">
-            <div class="seal">国三</div>
-            <h3>全国大学生计算机系统能力大赛</h3>
-            <p>操作系统设计赛道国家三等奖。</p>
-          </article>
-          <article class="award-card reveal reveal-delay-1">
-            <div class="seal">Top5</div>
-            <h3>腾讯云智能渗透挑战赛</h3>
-            <p>所在团队进入决赛并获全国第五。</p>
-          </article>
-          <article class="award-card reveal reveal-delay-2">
-            <div class="seal">专利</div>
-            <h3>国家发明专利</h3>
-            <p>扩散模型后门样本净化与防御相关专利，学生排名 2。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact-section" id="contact">
-      <div class="container">
-        <div class="contact-card reveal">
-          <div class="contact-tape"></div>
-          <h2>很高兴认识你 ✦</h2>
-          <p class="handwrite">欢迎交流 Agent 系统、可信 AI 与 LLM 训练推理</p>
-          <p class="contact-meta">10234804407@stu.ecnu.edu.cn · GitHub @NinjaKelly</p>
-          <div class="contact-links">
-            <a href="mailto:10234804407@stu.ecnu.edu.cn">Email</a>
-            <a href="https://github.com/NinjaKelly" target="_blank" rel="noopener">GitHub</a>
-            <a href="assets/Yang_Kelly_CV.pdf" target="_blank" rel="noopener">下载简历</a>
+        <article class="work-item compact">
+          <div class="work-main">
+            <h3>LLM Systems from Scratch</h3>
+            <p class="meta">Stanford CS336, 2025</p>
+            <p>Implemented BPE tokenization, Transformer decoder, training loop, sampling and evaluation, FlashAttention-style forward/backward computation, tensor parallelism, pipeline parallelism, and MinHash-LSH data filtering. Assignment 1 leaderboard rank: 14/70.</p>
           </div>
+        </article>
+
+        <article class="work-item compact">
+          <div class="work-main">
+            <h3>AgentDoG-Lite: LLM Agent Safety Diagnosis</h3>
+            <p class="meta">Personal research project, 2026</p>
+            <p>Built an agent safety diagnosis model based on Qwen3.5-0.8B with LoRA SFT and DPO to improve safety-risk identification and preference alignment.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <h2 id="experience-title">Experience</h2>
+        <div class="timeline">
+          <article>
+            <time>2026.06 - Present</time>
+            <div>
+              <h3>Research Intern, Shanghai AI Laboratory</h3>
+              <p>Data agents, agentic RL, agent memory, long-horizon reasoning, and controller-model-based LLM/VLM agent collaboration.</p>
+            </div>
+          </article>
+          <article>
+            <time>2026.04 - 2026.06</time>
+            <div>
+              <h3>Agent Systems Intern, Fudan Microelectronics Group</h3>
+              <p>Enterprise multi-agent collaboration, structured handoff, tool governance, long-term memory evaluation, and DDR-Benchmark based analysis.</p>
+            </div>
+          </article>
+          <article>
+            <time>2023.09 - 2027.06</time>
+            <div>
+              <h3>B.S. in Computer Science, East China Normal University</h3>
+              <p>Computer Science Honors Program. GPA 3.84/4.0, rank 2/25.</p>
+            </div>
+          </article>
         </div>
-        <p class="footer-note">杨嘉莉 · Made with AI · 2026</p>
-      </div>
-    </section>
+      </section>
+
+      <section class="section" id="honors" aria-labelledby="honors-title">
+        <h2 id="honors-title">Honors</h2>
+        <ul class="plain-list">
+          <li>National Scholarship</li>
+          <li>Outstanding Student Scholarship and Outstanding Student Award, East China Normal University</li>
+          <li>National Third Prize, Operating System Design Track, National College Computer System Capability Competition</li>
+          <li>Finalist and 5th place nationwide, Tencent Cloud Intelligent Penetration Challenge</li>
+          <li>Chinese invention patent 202511807335.9, student contributor 2, under substantive examination</li>
+        </ul>
+      </section>
+
+      <footer class="footer">
+        <p>© 2026 Kelly Jiali Yang. Last updated July 2026.</p>
+      </footer>
+    </div>
   </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image preview">
+    <button class="lightbox-close" type="button" aria-label="Close image preview">Close</button>
+    <img src="" alt="">
+  </div>
 
   <script src="script.js"></script>
 </body>
